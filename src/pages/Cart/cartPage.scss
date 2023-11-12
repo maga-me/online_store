@@ -1,0 +1,206 @@
+.cart {
+    padding: 40px 0;
+    margin-top: 150px;
+    position: relative;
+
+    &__yesOrNo {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 50px;
+        color: $baseColor;
+        display: flex;
+        flex-direction: column;
+
+        a {
+            color: $accentColor;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    &__product {
+        display: flex;
+        background: $accentColor2;
+        width: 80%;
+        gap: 20px;
+        border-radius: 14px;
+        padding: 20px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media (max-width: 850px) {
+            justify-content: center;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &-quantity {
+            text-align: center;
+            padding: 10px;
+            font-size: 25px;
+            font-weight: 700;
+            color: $baseColor;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 45px;
+            justify-content: end;
+        }
+
+        &-img {
+            box-shadow: 0 0 14px 3px $mainColor;
+            width: 200px;
+            height: 200px;
+            border-radius: 14px;
+            @media (max-width: 850px) {
+                width: 100%;
+            }
+        }
+
+        &-about {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 10px;
+        }
+
+        &-brand {
+            font-size: 20px;
+            color: $textColor;
+        }
+
+        &-desc {
+            font-size: 20px;
+        }
+
+        &-title {
+            font-size: 30px;
+            color: $baseColor;
+        }
+
+        &-price {
+            font-size: 24px;
+            color: $baseColor;
+        }
+
+        &-control {
+            display: flex;
+            justify-content: end;
+            align-items: flex-end;
+            gap: 12px;
+        }
+
+        &-add,
+        &-delete {
+            padding: 5px 10px;
+            cursor: pointer;
+            box-shadow: 0 0 14px 4px $mainColor;
+            border-radius: 5px;
+            color: $accentColor2;
+        }
+
+        &-add {
+            background: $baseColor;
+        }
+
+        &-delete {
+            border: 1px solid $accentColor;
+            color: $accentColor;
+            font-weight: 700;
+            transition: 400ms;
+
+            &:hover {
+                background: $accentColor;
+                color: $accentColor2;
+            }
+        }
+    }
+
+    &__total {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        height: 100svh;
+        width: 15%;
+        padding: 40px 15px;
+        background: $accentColor2;
+        box-shadow: 0 0 6px 2px $textColor;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        z-index: 11;
+        width: 220px;
+        transition: 400ms;
+
+        
+        @media (max-width: 850px) {
+            bottom: 0;
+            height: 200px;
+            width: 100%;
+
+            &-show {
+                position: fixed;
+                bottom: 180px;
+                right: 40px;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                background: #000;
+                z-index: 111;
+            }
+        }
+
+        &-txt {
+            color: $accentColor2;
+            background: $baseColor;
+            padding: 15px 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        &-buy {
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            border: 1px solid $baseColor;
+            border-radius: 4px;
+            width: 100%;
+            transition: 400ms;
+
+            &-noPr {
+                z-index: -1;
+                cursor: not-allowed;
+                transition: 400ms;
+
+                background: $mainColor;
+            }
+
+            &.active {
+                cursor: pointer;
+                background: $accentColor2;
+                color: $baseColor;
+                z-index: 1;
+
+                &:hover {
+                    background: $baseColor;
+                    color: $accentColor2;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,112 @@
+.buy {
+    margin-top: 150px;
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap-reverse;
+        align-items: start;
+        gap: 30px;
+    }
+
+    &__desc {
+        max-width: 400px;
+        width: 100%;
+
+        &-btn {
+            padding: 20px;
+            background: $baseColor;
+            color: $accentColor2;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 400ms;
+            &:hover {
+                transform: scale(1.04);
+            }
+        }
+
+        &-form {
+            display: flex;
+            gap: 30px;
+            flex-direction: column;
+        }
+
+        &-inp {
+            border-radius: 10px;
+            padding: 20px 25px;
+            box-shadow: 0 0 3px 1px $textColor;
+            outline: none;
+            transition: 400ms;
+            &:hover {
+                transform: scale(1.04);
+            }
+        }
+    }
+
+    &__info {
+        max-width: 400px;
+        width: 100%;
+        padding: 60px 30px;
+        background: $accentColor2;
+        height: 295px;
+        border-radius: 30px;
+
+        &-order {
+            font-size: 30px;
+            margin-bottom: 40px;
+            color: $baseColor;
+        }
+
+        &-product {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &-ttlprice {
+                font-size: 20px;
+            }
+            margin-bottom: 15px;
+        }
+
+        &-products {
+            font-size: 20px;
+
+            span {
+                font-size: 22px;
+            }
+        }
+
+        &-delivery {
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        &-total {
+            font-size: 24px;
+            color: $baseColor;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+}
+
+.noPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 34px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+
+    a {
+        color: $accentColor;
+    }
+}
