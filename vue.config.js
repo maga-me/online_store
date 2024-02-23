@@ -3,8 +3,8 @@ module.exports = defineConfig({
   transpileDependencies: true,
   pwa: {
     workboxOptions: {
-      exclude: [/_redirects/],
-    },
+      exclude: [/_redirects/]
+    }
   },
   publicPath: process.env.NODE_ENV === "production" ? "" : "/",
 });
